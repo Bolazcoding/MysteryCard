@@ -1,0 +1,175 @@
+body {
+  font-family: "Courier New", sans-serif;
+  text-align: center;
+  background-color: #fce4ec;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+#landing-page {
+  margin-top: 20%;
+}
+
+#landing-page h1 {
+  font-size: 2em;
+  color: #ad1457;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #f06292;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #ec407a;
+}
+
+#card-page {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin-top: 5%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+#card-page h1 {
+  font-size: 2em;
+  color: #d81b60;
+}
+
+#card-page p {
+  font-size: 1em;
+  color: #880e4f;
+  margin: 20px 0;
+}
+
+#floating-pictures {
+  position: relative;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.floating-image {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  animation: float 5s infinite ease-in-out;
+  border: 5px solid #f8bbd0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transform: translateY(-10%);
+}
+
+@keyframes float {
+  0% {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    top: 0;
+    left: 100%;
+    transform: translate(-100%, 0);
+  }
+}
+
+#balloon-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.balloons {
+  position: absolute;
+  bottom: -200px;
+  animation: rise 10s infinite ease-in-out;
+  z-index: 0;
+}
+
+.balloons:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.balloons:nth-child(2) {
+  left: 30%;
+  animation-delay: 2s;
+}
+
+.balloons:nth-child(3) {
+  left: 50%;
+  animation-delay: 4s;
+}
+
+.balloons:nth-child(4) {
+  left: 70%;
+  animation-delay: 6s;
+}
+
+.balloons:nth-child(5) {
+  left: 90%;
+  animation-delay: 8s;
+}
+
+@keyframes rise {
+  0% {
+    bottom: -200px;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+#confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff4081;
+  opacity: 0.7;
+  animation: fall 3s infinite ease-in-out;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
